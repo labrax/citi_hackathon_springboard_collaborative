@@ -1,0 +1,16 @@
+exclude_paths:
+  - mobile/**
+  - logs/**
+  - docs/**
+  - src/public/css/**
+  - src/public/css/**/*
+  - src/public/js/plugins/**
+  - src/public/js/plugins/**/*
+  - src/public/js/vendor/**
+  - src/public/js/vendor/**/*
+  - public/**
+  - public/**/*
+  - test/**/*
+  - .github/**
+  - CHANGELOG.md
+  - README.md
