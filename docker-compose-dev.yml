@@ -17,6 +17,9 @@ services:
     volumes:
       - trudesk_uploads:/usr/src/trudesk/public/uploads
       - trudesk_backups:/usr/src/trudesk/backups
+      - ./trudesk_files/public:/usr/src/trudesk/public
+      - ./trudesk_files/private:/usr/src/trudesk/private
+      - ./trudesk_files/src:/usr/src/trudesk
   mongo:
     image: mongo:5.0-focal
     restart: always
