@@ -82,7 +82,7 @@ ticketsController.getByStatus = function (req, res, next) {
   if (_.isUndefined(page)) page = 0
 
   const processor = {}
-  processor.title = 'Tickets'
+  processor.title = 'Cases'
   processor.nav = 'tickets'
   processor.subnav = 'tickets-'
   processor.renderpage = 'tickets'
@@ -137,7 +137,7 @@ ticketsController.getActive = function (req, res, next) {
   if (_.isUndefined(page)) page = 0
 
   const processor = {}
-  processor.title = 'Tickets'
+  processor.title = 'Cases'
   processor.nav = 'tickets'
   processor.subnav = 'tickets-active'
   processor.renderpage = 'tickets'
@@ -166,7 +166,7 @@ ticketsController.getAssigned = function (req, res, next) {
   if (_.isUndefined(page)) page = 0
 
   const processor = {}
-  processor.title = 'Tickets'
+  processor.title = 'Cases'
   processor.nav = 'tickets'
   processor.subnav = 'tickets-assigned'
   processor.renderpage = 'tickets'
@@ -197,7 +197,7 @@ ticketsController.getUnassigned = function (req, res, next) {
   if (_.isUndefined(page)) page = 0
 
   const processor = {}
-  processor.title = 'Tickets'
+  processor.title = 'Cases'
   processor.nav = 'tickets'
   processor.subnav = 'tickets-unassigned'
   processor.renderpage = 'tickets'
@@ -265,7 +265,7 @@ ticketsController.filter = function (req, res, next) {
   }
 
   const processor = {}
-  processor.title = 'Tickets'
+  processor.title = 'Cases'
   processor.nav = 'tickets'
   processor.renderpage = 'tickets'
   processor.pagetype = 'filter'
@@ -351,7 +351,7 @@ ticketsController.print = function (req, res) {
   }
 
   const content = {}
-  content.title = 'Tickets - ' + req.params.uid
+  content.title = 'Cases - ' + req.params.uid
   content.nav = 'tickets'
 
   content.data = {}
@@ -463,7 +463,7 @@ ticketsController.single = function (req, res) {
   }
 
   const content = {}
-  content.title = 'Tickets - ' + req.params.id
+  content.title = 'Cases - ' + req.params.id
   content.nav = 'tickets'
 
   content.data = {}

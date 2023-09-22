@@ -87,7 +87,7 @@ accountsController.getCustomers = function (req, res) {
   }
 
   const content = {}
-  content.title = 'Customers'
+  content.title = 'End-users'
   content.nav = 'accounts'
   content.subnav = 'accounts-customers'
 

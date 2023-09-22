@@ -384,7 +384,7 @@ class Mailer_MailerCheck extends React.Component {
               <hr style={{ float: 'left', marginTop: '10px' }} />
             </div>
             <div className='uk-margin-medium-bottom uk-clearfix'>
-              <label>Default Ticket Type</label>
+              <label>Default Case Type</label>
               <SingleSelect
                 showTextbox={false}
                 width={'100%'}
@@ -395,7 +395,7 @@ class Mailer_MailerCheck extends React.Component {
               />
             </div>
             <div className='uk-margin-medium-bottom uk-clearfix'>
-              <label>Default Ticket Priority</label>
+              <label>Default Case Priority</label>
               <SingleSelect
                 showTextbox={false}
                 width={'100%'}

@@ -616,7 +616,7 @@ apiTickets.createPublicTicket = function (req, res) {
             return next(null, defaultType.value, group, savedUser)
           }
 
-          return next('Failed: Invalid Default Ticket Type.')
+          return next('Failed: Invalid Default Case Type.')
         })
       },
 
@@ -1266,7 +1266,7 @@ apiTickets.deleteType = function (req, res) {
           if (setting && setting.value.toString().toLowerCase() === delTypeId.toString().toLowerCase()) {
             return next({
               custom: true,
-              message: 'Type currently "Default Ticket Type" for mailer check.'
+              message: 'Type currently "Default Case Type" for mailer check.'
             })
           }
 

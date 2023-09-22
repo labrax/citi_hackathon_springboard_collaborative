@@ -150,12 +150,6 @@ class Sidebar extends React.Component {
               >
                 {sessionUser && Helpers.canUser('agent:*', true) && (
                   <Submenu id='accounts'>
-                    <SubmenuItem
-                      href={'/accounts/customers'}
-                      text={'Customers'}
-                      icon={'account_box'}
-                      active={activeSubItem === 'accounts-customers'}
-                    />
                     {sessionUser && Helpers.canUser('agent:*', true) && (
                       <SubmenuItem
                         href={'/accounts/agents'}
@@ -178,7 +172,7 @@ class Sidebar extends React.Component {
             )}
             {sessionUser && Helpers.canUser('groups:view') && (
               <SidebarItem
-                text='Customer Groups'
+                text='Case Groups'
                 icon='supervisor_account'
                 href='/groups'
                 class='navGroups'

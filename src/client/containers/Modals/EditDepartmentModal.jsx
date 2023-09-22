@@ -168,7 +168,7 @@ class EditDepartmentModal extends React.Component {
             </div>
           </div>
           <div className={'uk-margin-medium-bottom'}>
-            <label style={{ marginBottom: 5 }}>Customer Groups</label>
+            <label style={{ marginBottom: 5 }}>Case Groups</label>
             <MultiSelect
               items={mappedGroups}
               onChange={() => {}}

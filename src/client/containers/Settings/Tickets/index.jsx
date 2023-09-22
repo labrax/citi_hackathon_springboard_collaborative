@@ -246,8 +246,8 @@ class TicketsSettings extends React.Component {
     return (
       <div className={active ? 'active' : 'hide'}>
         <SettingItem
-          title={'Default Ticket Type'}
-          subtitle={'Default ticket type for newly created tickets.'}
+          title={'Default Case Type'}
+          subtitle={'Default case type for newly created cases.'}
           component={
             <SingleSelect
               items={mappedTypes}
@@ -261,10 +261,10 @@ class TicketsSettings extends React.Component {
           }
         />
         <SettingItem
-          title={'Allow Public Tickets'}
+          title={'Allow Public Cases'}
           subtitle={
             <div>
-              Allow the creation of tickets by users that are unregistered. (
+              Allow the creation of cases by users that are unregistered. (
               <a href={viewdata.get('hosturl') + '/newissue'}>{viewdata.get('hosturl') + '/newissue'}</a>)
             </div>
           }
@@ -280,8 +280,8 @@ class TicketsSettings extends React.Component {
           }
         />
         <SettingItem
-          title={'Allow Agents to Submit Tickets on Behalf of User'}
-          subtitle={<div>Allow the creation of tickets by agents on behalf of users.</div>}
+          title={'Allow Agents to Submit Cases on Behalf of User'}
+          subtitle={<div>Allow the creation of cases by agents on behalf of users.</div>}
           tooltip={'Setting takes affect after refresh.'}
           component={
             <EnableSwitch
@@ -295,9 +295,9 @@ class TicketsSettings extends React.Component {
           }
         />
         <SettingItem
-          title={'Show Overdue Tickets'}
-          subtitle={'Enable/Disable flashing of tickets based on SLA time of type priority.'}
-          tooltip={'If disabled, priority SLA times will not mark tickets overdue.'}
+          title={'Show Overdue Cases'}
+          subtitle={'Enable/Disable flashing of cases based on SLA time of type priority.'}
+          tooltip={'If disabled, priority SLA times will not mark cases overdue.'}
           component={
             <EnableSwitch
               stateName={'showOverdueTickets'}
@@ -327,7 +327,7 @@ class TicketsSettings extends React.Component {
         {/*/>*/}
         <SettingItem
           title={'Minimum Subject Length'}
-          subtitle={'Minimum character limit for ticket subject'}
+          subtitle={'Minimum character limit for case subject'}
           component={
             <NumberWithSave
               stateName={'minSubjectLength'}
@@ -339,7 +339,7 @@ class TicketsSettings extends React.Component {
         />
         <SettingItem
           title={'Minimum Issue Length'}
-          subtitle={'Minimum character limit for ticket issue'}
+          subtitle={'Minimum character limit for case issue'}
           component={
             <NumberWithSave
               stateName={'minIssueLength'}
@@ -368,8 +368,8 @@ class TicketsSettings extends React.Component {
           })}
         />
         <SettingItem
-          title={'Ticket Priorities'}
-          subtitle={'Ticket priorities set the level of SLAs for each ticket.'}
+          title={'Case Priorities'}
+          subtitle={'Case priorities set the level of SLAs for each case.'}
           component={
             <Button
               text={'Create'}
@@ -460,8 +460,8 @@ class TicketsSettings extends React.Component {
         {/*</SettingItem>*/}
 
         <SettingItem
-          title={'Ticket Tags'}
-          subtitle={'Create/Modify Ticket Tags'}
+          title={'Case Tags'}
+          subtitle={'Create/Modify Case Tags'}
           component={
             <Button
               text={'Create'}

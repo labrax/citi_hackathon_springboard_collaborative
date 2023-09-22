@@ -213,11 +213,11 @@ class PermissionBody extends React.Component {
           />
           <PermissionGroupPartial
             ref={i => (this.ticketPermGroup = i)}
-            title={'Tickets'}
+            title={'Cases'}
             role={this.props.role}
             grants={this.ticketGrants}
             roleSpecials={PermissionBody.mapTicketSpecials()}
-            subtitle={'Ticket Permissions'}
+            subtitle={'Case Permissions'}
           />
           <PermissionGroupPartial
             ref={i => (this.commentPermGroup = i)}
