@@ -57,7 +57,7 @@ mainController.index = function (req, res) {
       content.pageLogo = '/assets/' + settings.customPageLogoFilename.value
     }
 
-    content.bottom = 'Trudesk v' + pkg.version
+    content.bottom = 'SpringboardCollaborative v' + pkg.version
 
     res.render('login', content)
   })
