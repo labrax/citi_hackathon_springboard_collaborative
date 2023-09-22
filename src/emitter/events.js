@@ -89,8 +89,8 @@ const eventTicketCreated = require('./events/event_ticket_created')
         ticket = {}
         ticket._id = data.ticketId
         ticket.uid = data.ticketUid
-        title = 'Assigned to Ticket #' + ticketUid
-        content = 'You were assigned to Ticket #' + ticketUid
+        title = 'Assigned to Case #' + ticketUid
+        content = 'You were assigned to Case #' + ticketUid
         users = [assigneeId]
         break
       default:
@@ -255,7 +255,7 @@ const eventTicketCreated = require('./events/event_ticket_created')
                     .then(function (html) {
                       const mailOptions = {
                         to: emails.join(),
-                        subject: 'Updated: Ticket #' + ticket.uid + '-' + ticket.subject,
+                        subject: 'Updated: Case #' + ticket.uid + '-' + ticket.subject,
                         html: html,
                         generateTextFromHTML: true
                       }

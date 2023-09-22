@@ -442,7 +442,7 @@ ticketsController.print = function (req, res) {
  * @see Ticket
  * @example
  * //Content Object
- * content.title = "Tickets - " + req.params.id;
+ * content.title = "Cases - " + req.params.id;
  * content.nav = 'tickets';
  *
  * content.data = {};
