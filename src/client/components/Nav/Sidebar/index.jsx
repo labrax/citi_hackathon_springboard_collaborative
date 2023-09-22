@@ -101,7 +101,7 @@ class Sidebar extends React.Component {
             )}
             {sessionUser && Helpers.canUser('tickets:view') && (
               <SidebarItem
-                text='Tickets'
+                text='Cases'
                 icon='assignment'
                 href='/tickets'
                 class='navTickets no-ajaxy'
@@ -273,7 +273,7 @@ class Sidebar extends React.Component {
                     active={activeSubItem === 'settings-appearance'}
                   />
                   <SubmenuItem
-                    text='Tickets'
+                    text='Cases'
                     icon='assignment'
                     href='/settings/tickets'
                     active={activeSubItem === 'settings-tickets'}
