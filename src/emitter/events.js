@@ -62,14 +62,14 @@ const eventTicketCreated = require('./events/event_ticket_created')
     let content, comment, assigneeId, ticketUid
     switch (data.type) {
       case 1:
-        title = 'Ticket #' + ticket.uid + ' Created'
+        title = 'Case #' + ticket.uid + ' Created'
         content = ticket.owner.fullname + ' submitted a ticket'
         users = _.map(ticket.group.sendMailTo, function (o) {
           return o._id
         })
         break
       case 2:
-        title = 'Ticket #' + ticket.uid + ' Updated'
+        title = 'Case #' + ticket.uid + ' Updated'
         content = _.last(ticket.history).description
         comment = _.last(ticket.comments)
         users = _.compact(

@@ -226,7 +226,7 @@ ticketsV2.transferToThirdParty = async (req, res) => {
 
   try {
     const ticket = await Models.Ticket.findOne({ uid })
-    if (!ticket) return apiUtils.sendApiError(res, 400, 'Ticket not found')
+    if (!ticket) return apiUtils.sendApiError(res, 400, 'Case not found')
 
     ticket.status = 3
     await ticket.save()

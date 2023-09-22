@@ -350,7 +350,7 @@ class TicketsSettings extends React.Component {
           }
         />
         <SplitSettingsPanel
-          title={'Ticket Types'}
+          title={'Case Types'}
           subtitle={'Create/Modify Ticket Types'}
           rightComponent={
             <Button
@@ -417,8 +417,8 @@ class TicketsSettings extends React.Component {
         <TicketStatusContainer statuses={this.getStatus()} />
 
         {/*<SettingItem*/}
-        {/*  title={'Ticket Status'}*/}
-        {/*  subtitle={'Ticket status sets the current status options available'}*/}
+        {/*  title={'Case Status'}*/}
+        {/*  subtitle={'Case status sets the current status options available'}*/}
         {/*  component={*/}
         {/*    <Button*/}
         {/*      text={'Create'}*/}

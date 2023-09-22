@@ -148,7 +148,7 @@ function * restoreDeletedTicket ({ payload }) {
   try {
     const response = yield call(api.settings.restoreDeletedTicket, payload)
     yield put({ type: RESTORE_DELETED_TICKET.SUCCESS, response, payload })
-    helpers.UI.showSnackbar('Ticket Restored')
+    helpers.UI.showSnackbar('Case Restored')
   } catch (error) {
     const errorText = error.response.data.error
     helpers.UI.showSnackbar(`Error: ${errorText}`, true)
@@ -160,7 +160,7 @@ function * permDeleteTicket ({ payload }) {
   try {
     const response = yield call(api.settings.permDeleteTicket, payload)
     yield put({ type: PERM_DELETE_TICKET.SUCCESS, response, payload })
-    helpers.UI.showSnackbar('Ticket Deleted')
+    helpers.UI.showSnackbar('Case Deleted')
   } catch (error) {
     const errorText = error.response ? error.response.data.error : error
     if (error.response && error.response.status !== (401 || 403)) {

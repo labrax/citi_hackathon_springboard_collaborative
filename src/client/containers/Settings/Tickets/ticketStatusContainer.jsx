@@ -49,8 +49,8 @@ class TicketStatusContainer extends React.Component {
     return (
       <div>
         <SplitSettingsPanel
-          title={'Ticket Status'}
-          subtitle={'Ticket status sets the state of a ticket. (Active, Pending, Resolved, etc.)'}
+          title={'Case Status'}
+          subtitle={'Case status sets the state of a ticket. (Active, Pending, Resolved, etc.)'}
           rightComponent={
             <Button
               text={'Create'}

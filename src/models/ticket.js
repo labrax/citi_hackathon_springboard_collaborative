@@ -255,7 +255,7 @@ ticketSchema.methods.setStatus = function (ownerId, status, callback) {
 
       const historyItem = {
         action: 'ticket:set:status:' + statusModel.name,
-        description: 'Ticket Status set to: ' + statusModel.name,
+        description: 'Case Status set to: ' + statusModel.name,
         owner: ownerId
       }
 
@@ -350,7 +350,7 @@ ticketSchema.methods.setTicketType = function (ownerId, typeId, callback) {
 
     const historyItem = {
       action: 'ticket:set:type',
-      description: 'Ticket type set to: ' + type.name,
+      description: 'Case type set to: ' + type.name,
       owner: ownerId
     }
 
@@ -377,7 +377,7 @@ ticketSchema.methods.setTicketPriority = function (ownerId, priority, callback) 
   self.priority = priority._id
   const historyItem = {
     action: 'ticket:set:priority',
-    description: 'Ticket Priority set to: ' + priority.name,
+    description: 'Case Priority set to: ' + priority.name,
     owner: ownerId
   }
   self.history.push(historyItem)
@@ -411,7 +411,7 @@ ticketSchema.methods.setTicketGroup = function (ownerId, groupId, callback) {
 
     const historyItem = {
       action: 'ticket:set:group',
-      description: 'Ticket Group set to: ' + ticket.group.name,
+      description: 'Case Group set to: ' + ticket.group.name,
       owner: ownerId
     }
     self.history.push(historyItem)
@@ -426,7 +426,7 @@ ticketSchema.methods.setTicketDueDate = function (ownerId, dueDate, callback) {
 
   const historyItem = {
     action: 'ticket:set:duedate',
-    description: 'Ticket Due Date set to: ' + self.dueDate,
+    description: 'Case Due Date set to: ' + self.dueDate,
     owner: ownerId
   }
 
@@ -463,7 +463,7 @@ ticketSchema.methods.setIssue = function (ownerId, issue, callback) {
 
     const historyItem = {
       action: 'ticket:update:issue',
-      description: 'Ticket Issue was updated.',
+      description: 'Case Issue was updated.',
       owner: ownerId
     }
 
@@ -481,7 +481,7 @@ ticketSchema.methods.setSubject = function (ownerId, subject, callback) {
     self.subject = subject
     const historyItem = {
       action: 'ticket:update:subject',
-      description: 'Ticket Subject was updated.',
+      description: 'Case Subject was updated.',
       owner: ownerId
     }
 

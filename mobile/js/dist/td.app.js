@@ -2377,7 +2377,7 @@ angular
       $scope.popover.hide()
       $ionicActionSheet.show({
         buttons: [{ text: 'Open' }, { text: 'Pending' }, { text: 'Closed' }],
-        titleText: 'Set Ticket Status',
+        titleText: 'Set Case Status',
         cancelText: 'Cancel',
         cancel: function () {
           return true
@@ -2390,7 +2390,7 @@ angular
               Tickets.update(reqTicket).then(
                 function successCallback (response) {
                   $scope.ticket.status = 1
-                  $scope.showSnackbar('Ticket status set to Open')
+                  $scope.showSnackbar('Case status set to Open')
                 },
                 function errorCallback (response) {
                   console.log(response)
@@ -2403,7 +2403,7 @@ angular
               Tickets.update(reqTicket).then(
                 function successCallback (response) {
                   $scope.ticket.status = 2
-                  $scope.showSnackbar('Ticket status set to Pending')
+                  $scope.showSnackbar('Case status set to Pending')
                 },
                 function errorCallback (response) {
                   console.log(response)
@@ -2722,7 +2722,7 @@ angular
       }
       var sheet = $ionicActionSheet.show({
         buttons: buttons,
-        titleText: 'Ticket Options',
+        titleText: 'Case Options',
         cancelText: 'Cancel',
         cancel: function () {},
         buttonClicked: function (index) {
@@ -2744,7 +2744,7 @@ angular
               Tickets.update(reqTicket).then(
                 function successCallback (response) {
                   t.status = 1
-                  $scope.showSnackbar('Ticket status set to Open')
+                  $scope.showSnackbar('Case status set to Open')
                 },
                 function errorCallback (response) {
                   console.log(response)
@@ -2760,7 +2760,7 @@ angular
               Tickets.update(reqTicket).then(
                 function successCallback (response) {
                   t.status = 2
-                  $scope.showSnackbar('Ticket status set to Pending')
+                  $scope.showSnackbar('Case status set to Pending')
                 },
                 function errorCallback (response) {
                   console.log(response)
@@ -2778,7 +2778,7 @@ angular
                   function successCallback (response) {
                     var idx = $scope.tickets.indexOf(t)
                     if (idx != -1) $scope.tickets.splice(idx, 1)
-                    $scope.showSnackbar('Ticket status set to Closed')
+                    $scope.showSnackbar('Case status set to Closed')
                   },
                   function errorCallback (response) {
                     console.log(response)

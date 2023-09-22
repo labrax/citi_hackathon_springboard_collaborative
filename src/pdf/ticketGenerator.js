@@ -31,9 +31,9 @@ class TicketPDFGenerator {
       .image(path.resolve(__dirname, '../../public/img/defaultLogoDark.png'), 50, 50, { width: 128 })
       .fillColor('#000')
       .fontSize(20)
-      .text('Ticket', 275, 50, { align: 'right' })
+      .text('Case', 275, 50, { align: 'right' })
       .fontSize(10)
-      .text('Ticket Number:   ' + this.ticket.uid, { align: 'right' })
+      .text('Case Number:   ' + this.ticket.uid, { align: 'right' })
       .text('Group:   ' + this.ticket.group.name, { align: 'right' })
       .text('Due Date:   ' + moment(this.ticket.dueDate).format('MM-DD-YYYY'), { align: 'right' })
       .text('Priority:   ' + this.ticket.priority.name, { align: 'right' })
@@ -168,7 +168,7 @@ class TicketPDFGenerator {
     doc
       .moveDown(4)
       .fontSize(14)
-      .text('Ticket History', 50)
+      .text('Case History', 50)
       .moveDown()
 
     if (history.length < 1) doc.text('No History')
@@ -193,7 +193,7 @@ class TicketPDFGenerator {
   }
 
   generate (callback) {
-    const filename = 'Ticket#' + this.ticket.uid + '.pdf'
+    const filename = 'Case#' + this.ticket.uid + '.pdf'
     const theOutput = new PDFDocument({ bufferPages: true })
     const buffers = []
     const obj = {}

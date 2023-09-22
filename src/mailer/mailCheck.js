@@ -367,7 +367,7 @@ function handleMessages (messages, done) {
             function (results, callback) {
               var HistoryItem = {
                 action: 'ticket:created',
-                description: 'Ticket was created.',
+                description: 'Case was created.',
                 owner: message.owner._id
               }
 

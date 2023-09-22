@@ -377,7 +377,7 @@ class BackupRestoreSettingsContainer extends React.Component {
             </SettingItem>
           </div>
         )}
-        <SettingItem title={'Deleted Tickets'} subtitle={'Tickets marked as deleted are shown below.'}>
+        <SettingItem title={'Deleted Tickets'} subtitle={'Cases marked as deleted are shown below.'}>
           {this.props.settings.deletedTickets.size < 1 && (
             <Zone>
               <ZoneBox>

@@ -439,7 +439,7 @@ apiTickets.create = function (req, res) {
 
         var HistoryItem = {
           action: 'ticket:created',
-          description: 'Ticket was created.',
+          description: 'Case was created.',
           owner: req.user._id
         }
 
@@ -629,7 +629,7 @@ apiTickets.createPublicTicket = function (req, res) {
           var TicketSchema = require('../../../models/ticket')
           var HistoryItem = {
             action: 'ticket:created',
-            description: 'Ticket was created.',
+            description: 'Case was created.',
             owner: savedUser._id
           }
           ticket = new TicketSchema({
@@ -1547,7 +1547,7 @@ apiTickets.getTicketStats = function (req, res) {
   var cache = global.cache
 
   if (_.isUndefined(cache)) {
-    return res.status(400).send('Ticket stats are still loading...')
+    return res.status(400).send('Case stats are still loading...')
   }
 
   var obj = {}
