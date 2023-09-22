@@ -250,7 +250,7 @@ class CreateTicketModal extends React.Component {
             </Grid>
           </div>
           <div className='uk-margin-medium-bottom'>
-            <label className={'uk-form-label'}>Priority</label>
+            <label className={'uk-form-label'}>Current Status</label>
             <div
               ref={i => (this.priorityLoader = i)}
               style={{ height: '32px', width: '32px', position: 'relative' }}

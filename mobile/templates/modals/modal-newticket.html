@@ -1,6 +1,6 @@
 <ion-modal-view>
   <ion-header-bar class="bar-dark">
-    <h1 class="title">New Ticket</h1>
+    <h1 class="title">New Applicant</h1>
     <div class="buttons">
       <button class="button button-icon button-clear ion-ios-close-empty" style="color: white;" ng-click="closeNewTicket()"></button>
     </div>
@@ -9,25 +9,19 @@
     <form action="#" ng-submit="submitNewTicket($event)">
       <div class="list">
         <label class="item item-input">
-          <input type="text" placeholder="Subject" ng-model="modalNewTicketForm.subject">
+          <input type="text" placeholder="Full Name" ng-model="modalNewTicketForm.subject">
         </label>
+        
         <label class="item item-input item-select">
           <div class="input-label">
-            Group
-          </div>
-          <select ng-model="selected.group" ng-options="group._id as group.name for group in groups">
-          </select>
-        </label>
-        <label class="item item-input item-select">
-          <div class="input-label">
-            Type
+            Sex
           </div>
           <select ng-model="selected.ticketType" ng-options="type as type.name for type in ticketTypes">
           </select>
         </label>
         <label class="item item-input item-select">
           <div class="input-label">
-            Priority
+            Status
           </div>
           <select ng-model="selected.priority._id" ng-options="priority._id as priority.name for priority in selected.ticketType.priorities"></select>
         </label>
@@ -37,7 +31,7 @@
         </label>
         <div class="padding">
           <button class="button button-full button-balanced" type="submit">
-            Create Ticket
+            Submit
           </button>
         </div>
       </div>
