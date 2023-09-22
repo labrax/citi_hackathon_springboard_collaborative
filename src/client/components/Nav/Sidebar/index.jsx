@@ -142,7 +142,7 @@ class Sidebar extends React.Component {
               <SidebarItem
                 text='Accounts'
                 icon='&#xE7FD;'
-                href='/accounts'
+                href='/accounts/agents'
                 class='navAccounts'
                 active={activeItem === 'accounts'}
                 subMenuTarget='accounts'
