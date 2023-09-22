@@ -32,15 +32,28 @@ nconf.argv().env()
 global.env = process.env.NODE_ENV || 'development'
 
 if (!process.env.FORK) {
-  winston.info('    .                              .o8                     oooo')
-  winston.info('  .o8                             "888                     `888')
-  winston.info('.o888oo oooo d8b oooo  oooo   .oooo888   .ooooo.   .oooo.o  888  oooo')
-  winston.info('  888   `888""8P `888  `888  d88\' `888  d88\' `88b d88(  "8  888 .8P\'')
-  winston.info('  888    888      888   888  888   888  888ooo888 `"Y88b.   888888.')
-  winston.info('  888 .  888      888   888  888   888  888    .o o.  )88b  888 `88b.')
-  winston.info('  "888" d888b     `V88V"V8P\' `Y8bod88P" `Y8bod8P\' 8""888P\' o888o o888o')
+  winston.info('                                                            ')
+  winston.info('\\_| |_/\\__,_|\\___|_|\\_\\__,_|\\__|_| |_|\\___/|_| |_|          ')
+  winston.info('| | | | (_| | (__|   < (_| | |_| | | | (_) | | | |          ')
+  winston.info('|  _  |/ _` |/ __| |/ / _` | __| \'_ \\ / _ \\| \'_ \\           ')
+  winston.info('| |_| | __ _  ___| | ____ _| |_| |__   ___  _ __            ')
+  winston.info('| | | |          | |       | | | |                          ')
+  winston.info(' _   _            \\____/\\___/|_|_|\\___|\\___|\\__|_| \\_/ \\___|')
+  winston.info('                 | \\__/\\ (_) | | |  __/ (__| |_| |\\ V /  __/')
+  winston.info('                 | |    / _ \\| | |/ _ \\/ __| __| \\ \\ / / _ \\')
+  winston.info('                 | /  \\/ ___ | | | ___  ___| |_ ___   _____ ')
+  winston.info('                 /  __ \\     | | |         | | (_)          ')
+  winston.info('      |_|         _____   |___/ _           _   _           ')
+  winston.info('      | |                  __/ |                            ')
+  winston.info('\\____/| .__/|_|  |_|_| |_|\\__, \\____/ \\___/ \\__,_|_|  \\__,_|')
+  winston.info('/\\__/ / |_) | |  | | | | | (_| | |_/ / (_) | (_| | | | (_| |')
+  winston.info(' `--. \\ \'_ \\| \'__| | \'_ \\ / _` | ___ \\/ _ \\ / _` | \'__/ _` |')
+  winston.info('\\ `--. _ __  _ __ _ _ __   __ _| |_/ / ___   __ _ _ __ __| |')
+  winston.info('/  ___|          (_)           | ___ \\                   | |')
+  winston.info(' _____            _            ______                     _ ')  
+  // font from https://patorjk.com/software/taag/#p=display&v=2&f=Doom&t=SpringBoard%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20Collective%0AHackathon
   winston.info('==========================================================================')
-  winston.info('trudesk v' + pkg.version + ' Copyright (C) 2014-2023 Chris Brame')
+  winston.info('Solution based on - trudesk v' + pkg.version + '')
   winston.info('')
   winston.info('Running in: ' + global.env)
   winston.info('Server Time: ' + new Date())
@@ -67,7 +80,7 @@ function launchInstallServer () {
 
   const ws = require('./src/webserver')
   ws.installServer(function () {
-    return winston.info('Trudesk Install Server Running...')
+    return winston.info('Install Server Running...')
   })
 }
 
@@ -226,7 +239,7 @@ function launchServer (db) {
         if (err) throw new Error(err)
 
         ws.listen(function () {
-          winston.info('trudesk Ready')
+          winston.info('webservice Ready')
         })
       }
     )
