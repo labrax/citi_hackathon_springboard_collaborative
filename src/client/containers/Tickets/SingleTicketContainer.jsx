@@ -299,7 +299,7 @@ class SingleTicketContainer extends React.Component {
                 style={{ width: 360, maxWidth: 360, minWidth: 360 }}
               >
                 <div className='page-title-border-right relative' style={{ padding: '0 30px' }}>
-                  <p>Ticket #{this.ticket.uid}</p>
+                  <p>Case #{this.ticket.uid}</p>
                   <StatusSelector
                     ticketId={this.ticket._id}
                     status={this.ticket.status._id}

@@ -175,7 +175,7 @@ const createPublicNotification = async ticket => {
 const saveNotification = async (user, ticket) => {
   const notification = new Notification({
     owner: user,
-    title: `Ticket #${ticket.uid} Created`,
+    title: `Case #${ticket.uid} Created`,
     message: ticket.subject,
     type: 0,
     data: { ticket },
