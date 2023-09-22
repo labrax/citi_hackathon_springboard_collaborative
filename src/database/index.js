@@ -29,9 +29,9 @@ const mongoConnectionUri = {
 let CONNECTION_URI = ''
 if (!mongoConnectionUri.username) {
   CONNECTION_URI =
-    'mongodb://' + mongoConnectionUri.server + ':' + mongoConnectionUri.port + '/' + mongoConnectionUri.database
+    'mongodb://' + mongoConnectionUri.server + ':' + mongoConnectionUri.port + '/' + mongoConnectionUri.database + '?tls=true&tlsCAFile=global-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false'
   if (mongoConnectionUri.shard === true)
-    CONNECTION_URI = 'mongodb+srv://' + mongoConnectionUri.server + '/' + mongoConnectionUri.database
+    CONNECTION_URI = 'mongodb+srv://' + mongoConnectionUri.server + '/' + mongoConnectionUri.database + '?tls=true&tlsCAFile=global-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false'
 } else {
   mongoConnectionUri.password = encodeURIComponent(mongoConnectionUri.password)
   if (mongoConnectionUri.shard === true)
@@ -43,7 +43,7 @@ if (!mongoConnectionUri.username) {
       '@' +
       mongoConnectionUri.server +
       '/' +
-      mongoConnectionUri.database
+      mongoConnectionUri.database + '?tls=true&tlsCAFile=global-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false'
   else
     CONNECTION_URI =
       'mongodb://' +
@@ -55,7 +55,7 @@ if (!mongoConnectionUri.username) {
       ':' +
       mongoConnectionUri.port +
       '/' +
-      mongoConnectionUri.database
+      mongoConnectionUri.database + '?tls=true&tlsCAFile=global-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false'
 }
 
 if (process.env.TD_MONGODB_URI) CONNECTION_URI = process.env.TD_MONGODB_URI
